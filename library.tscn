@@ -1,0 +1,132 @@
+[gd_scene load_steps=18 format=3 uid="uid://crwfjlyhvhm3a"]
+
+[ext_resource type="Script" path="res://library.gd" id="1_vocyu"]
+[ext_resource type="Texture2D" uid="uid://cexcndtsny1up" path="res://vecteezy_city-street-with-houses-and-overpass-road_15680390.jpg" id="2_mwnr2"]
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_wv441"]
+[ext_resource type="PackedScene" uid="uid://ce6govaw2dc75" path="res://hunger_ui.tscn" id="3_jb3xr"]
+[ext_resource type="Texture2D" uid="uid://q2is10nmgnvg" path="res://Character/9.png" id="3_s66tj"]
+[ext_resource type="Texture2D" uid="uid://ol5qmivbo43l" path="res://Character/1.png" id="3_wirjw"]
+[ext_resource type="Texture2D" uid="uid://bdaqgbgwmb52n" path="res://Character/2.png" id="4_te115"]
+[ext_resource type="Texture2D" uid="uid://leldjr1gi6kd" path="res://Character/3.png" id="5_vexpq"]
+[ext_resource type="Texture2D" uid="uid://4hhrq2nhkwvp" path="res://Character/4.png" id="6_26r7e"]
+[ext_resource type="Texture2D" uid="uid://bkumktjhdmjf7" path="res://Character/5.png" id="7_pj43d"]
+[ext_resource type="Texture2D" uid="uid://ctyy0w0ueplve" path="res://Character/6.png" id="8_1oa66"]
+[ext_resource type="Texture2D" uid="uid://b8qx463gmakkv" path="res://Character/7.png" id="9_407fe"]
+[ext_resource type="Texture2D" uid="uid://dyyc1t1htya5v" path="res://Character/8.png" id="10_imroh"]
+[ext_resource type="AudioStream" uid="uid://d1g0q63vxtnmc" path="res://Otjanbird-Pt.-I.mp3" id="14_7i68j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqkqx"]
+size = Vector2(1696, 747)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m6bo8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_s66tj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wirjw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_te115")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vexpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_26r7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pj43d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1oa66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_407fe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_imroh")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u1r36"]
+radius = 69.0
+height = 326.0
+
+[node name="mian_game" type="Node2D"]
+script = ExtResource("1_vocyu")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(790, 323)
+scale = Vector2(0.389087, 0.389087)
+
+[node name="Bg" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(267.292, 115.655)
+scale = Vector2(3, 3)
+texture = ExtResource("2_mwnr2")
+
+[node name="alamatTaajob" type="Label" parent="StaticBody2D2/Bg"]
+offset_left = 364.1
+offset_top = -165.344
+offset_right = 620.1
+offset_bottom = -44.3442
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 83
+text = "! ! !"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(4261.26, -43.6921)
+scale = Vector2(2.57012, 2.57012)
+shape = SubResource("RectangleShape2D_aqkqx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-4235.56, 8.99542)
+scale = Vector2(2.57012, 2.57012)
+shape = SubResource("RectangleShape2D_aqkqx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(89.9542, 1593.47)
+scale = Vector2(2.57012, 2.57012)
+shape = SubResource("RectangleShape2D_aqkqx")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-577, 128)
+script = ExtResource("2_wv441")
+
+[node name="HungerUI" parent="CharacterBody2D" instance=ExtResource("3_jb3xr")]
+offset_left = 551.0
+offset_top = -44.0
+offset_right = 551.0
+offset_bottom = -44.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(647, 261.563)
+scale = Vector2(0.664234, 0.664234)
+sprite_frames = SubResource("SpriteFrames_m6bo8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(644, 257)
+shape = SubResource("CapsuleShape2D_u1r36")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(631, -4)
+limit_left = 5
+limit_top = 0
+limit_right = 1600
+limit_bottom = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
+[node name="BackGroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_7i68j")
+autoplay = true

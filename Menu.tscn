@@ -2,15 +2,15 @@
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_1kkhg"]
 [ext_resource type="StyleBox" uid="uid://cfyps1g5m4yf" path="res://Menu/button.tres" id="2_0m6u6"]
-[ext_resource type="Texture2D" uid="uid://dwbt4ed0cqm7a" path="res://DALL·E 2024-04-23 19.52.53 - Create a detailed and harmonious background for a game menu that would complement the uploaded image of a stylized, colorful city street with building.webp" id="2_db3jn"]
 [ext_resource type="FontFile" uid="uid://bt7me82f7hdaq" path="res://font/IRANYekan-Black.ttf" id="2_ft30c"]
+[ext_resource type="Texture2D" uid="uid://dwbt4ed0cqm7a" path="res://assets/DALL·E 2024-04-23 19.52.53 - Create a detailed and harmonious background for a game menu that would complement the uploaded image of a stylized, colorful city street with building.webp" id="2_ugcsh"]
 [ext_resource type="StyleBox" uid="uid://cm7lumt5goex3" path="res://Menu/hover.tres" id="3_emcn1"]
 [ext_resource type="StyleBox" uid="uid://dpm4rq470bmh1" path="res://Menu/press.tres" id="4_j18q0"]
 [ext_resource type="FontFile" uid="uid://d0iilml6jl7cr" path="res://font/IranNastaliq.ttf" id="7_em7e6"]
 [ext_resource type="FontFile" uid="uid://rx6ltmudlhu4" path="res://font/IRANYekan-Bold.ttf" id="8_lsdw8"]
 [ext_resource type="StyleBox" uid="uid://bikpwmkm2n5of" path="res://Menu/close.tres" id="9_bfou1"]
+[ext_resource type="AudioStream" uid="uid://d1g0q63vxtnmc" path="res://assets/Otjanbird-Pt.-I.mp3" id="11_8jc7k"]
 [ext_resource type="Texture2D" uid="uid://5blbax1ec3j2" path="res://Menu/playing.png" id="11_sj4d4"]
-[ext_resource type="AudioStream" uid="uid://d1g0q63vxtnmc" path="res://Otjanbird-Pt.-I.mp3" id="11_t8hu8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxedq"]
 bg_color = Color(0, 0, 0, 0.545098)
@@ -46,7 +46,7 @@ offset_right = 384.0
 offset_bottom = 216.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_db3jn")
+texture = ExtResource("2_ugcsh")
 
 [node name="darker" type="Panel" parent="."]
 layout_mode = 1
@@ -205,7 +205,7 @@ text = "                                                      به نام او
 horizontal_alignment = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_t8hu8")
+stream = ExtResource("11_8jc7k")
 autoplay = true
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

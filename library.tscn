@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://crwfjlyhvhm3a"]
 
 [ext_resource type="Script" path="res://library.gd" id="1_vocyu"]
-[ext_resource type="Texture2D" uid="uid://cexcndtsny1up" path="res://vecteezy_city-street-with-houses-and-overpass-road_15680390.jpg" id="2_mwnr2"]
+[ext_resource type="Texture2D" uid="uid://cexcndtsny1up" path="res://assets/vecteezy_city-street-with-houses-and-overpass-road_15680390.jpg" id="2_kqkwh"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_wv441"]
 [ext_resource type="PackedScene" uid="uid://ce6govaw2dc75" path="res://hunger_ui.tscn" id="3_jb3xr"]
 [ext_resource type="Texture2D" uid="uid://q2is10nmgnvg" path="res://Character/9.png" id="3_s66tj"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ctyy0w0ueplve" path="res://Character/6.png" id="8_1oa66"]
 [ext_resource type="Texture2D" uid="uid://b8qx463gmakkv" path="res://Character/7.png" id="9_407fe"]
 [ext_resource type="Texture2D" uid="uid://dyyc1t1htya5v" path="res://Character/8.png" id="10_imroh"]
-[ext_resource type="AudioStream" uid="uid://d1g0q63vxtnmc" path="res://Otjanbird-Pt.-I.mp3" id="14_7i68j"]
+[ext_resource type="AudioStream" uid="uid://d1g0q63vxtnmc" path="res://assets/Otjanbird-Pt.-I.mp3" id="14_in5nl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqkqx"]
 size = Vector2(1696, 747)
@@ -72,7 +72,7 @@ scale = Vector2(0.389087, 0.389087)
 [node name="Bg" type="Sprite2D" parent="StaticBody2D2"]
 position = Vector2(267.292, 115.655)
 scale = Vector2(3, 3)
-texture = ExtResource("2_mwnr2")
+texture = ExtResource("2_kqkwh")
 
 [node name="alamatTaajob" type="Label" parent="StaticBody2D2/Bg"]
 offset_left = 364.1
@@ -113,6 +113,7 @@ offset_bottom = -44.0
 position = Vector2(647, 261.563)
 scale = Vector2(0.664234, 0.664234)
 sprite_frames = SubResource("SpriteFrames_m6bo8")
+animation = &"walking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(644, 257)
@@ -128,5 +129,5 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="BackGroundMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("14_7i68j")
+stream = ExtResource("14_in5nl")
 autoplay = true

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cexcndtsny1up"
-path="res://.godot/imported/vecteezy_city-street-with-houses-and-overpass-road_15680390.jpg-71de7bb19748373337a8595e085e91a1.ctex"
+uid="uid://cc4xespnptmvf"
+path="res://.godot/imported/3 (1).png-ed3e23d65b9532be440aa98dc04840fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://vecteezy_city-street-with-houses-and-overpass-road_15680390.jpg"
-dest_files=["res://.godot/imported/vecteezy_city-street-with-houses-and-overpass-road_15680390.jpg-71de7bb19748373337a8595e085e91a1.ctex"]
+source_file="res://assets/3 (1).png"
+dest_files=["res://.godot/imported/3 (1).png-ed3e23d65b9532be440aa98dc04840fe.ctex"]
 
 [params]
 

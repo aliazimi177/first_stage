@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://blkadft8fhbn2"]
+[gd_scene load_steps=11 format=3 uid="uid://blkadft8fhbn2"]
 
-[ext_resource type="Texture2D" uid="uid://b7lxrv2811cmw" path="res://pizza_place.webp" id="1_l7uf0"]
 [ext_resource type="Script" path="res://pizza_place.gd" id="1_pb6ub"]
-[ext_resource type="Texture2D" uid="uid://c2pwq3gappt7s" path="res://1 (1).png" id="3_dire6"]
-[ext_resource type="Texture2D" uid="uid://dh5hlp364hfkd" path="res://2 (1).png" id="4_1633y"]
-[ext_resource type="Texture2D" uid="uid://cc4xespnptmvf" path="res://3 (1).png" id="5_c3byb"]
-[ext_resource type="Texture2D" uid="uid://cpidshm1p52m0" path="res://4 (1).png" id="6_m5boe"]
+[ext_resource type="Texture2D" uid="uid://b7lxrv2811cmw" path="res://assets/pizza_place.webp" id="2_wcdnn"]
+[ext_resource type="FontFile" uid="uid://bt7me82f7hdaq" path="res://font/IRANYekan-Black.ttf" id="3_arucd"]
+[ext_resource type="Texture2D" path="res://1 (1).png" id="3_dire6"]
+[ext_resource type="Texture2D" uid="uid://c2pwq3gappt7s" path="res://assets/1 (1).png" id="4_k3vcf"]
+[ext_resource type="Texture2D" uid="uid://dh5hlp364hfkd" path="res://assets/2 (1).png" id="5_h2jhw"]
+[ext_resource type="Texture2D" uid="uid://cc4xespnptmvf" path="res://assets/3 (1).png" id="6_u7bsh"]
+[ext_resource type="Texture2D" uid="uid://cpidshm1p52m0" path="res://assets/4 (1).png" id="7_ipji6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qkit3"]
 
@@ -21,16 +23,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_dire6")
+"texture": ExtResource("4_k3vcf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_1633y")
+"texture": ExtResource("5_h2jhw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_c3byb")
+"texture": ExtResource("6_u7bsh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_m5boe")
+"texture": ExtResource("7_ipji6")
 }],
 "loop": true,
 "name": &"talking",
@@ -59,7 +61,7 @@ offset_right = 579.0
 offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_l7uf0")
+texture = ExtResource("2_wcdnn")
 
 [node name="yes_pizza" type="Button" parent="."]
 layout_mode = 1
@@ -71,6 +73,7 @@ offset_top = 62.0
 offset_right = 440.0
 offset_bottom = 170.0
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_arucd")
 theme_override_font_sizes/font_size = 37
 text = "سلام
 برای سفارش پیتزا کلیک کنید!"
@@ -88,6 +91,7 @@ offset_right = -14.0
 offset_bottom = 167.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_arucd")
 theme_override_font_sizes/font_size = 41
 text = "میخوام خارج شم"
 

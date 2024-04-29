@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c43acjouhrhxj"
-path="res://.godot/imported/libraryBackground.jpeg-2dd7bcb3d0f9c5ec93c2b7d89eb967f2.ctex"
+uid="uid://b7lxrv2811cmw"
+path="res://.godot/imported/pizza_place.webp-46a5a5de094cf14944d8d01240e217c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://libraryBackground.jpeg"
-dest_files=["res://.godot/imported/libraryBackground.jpeg-2dd7bcb3d0f9c5ec93c2b7d89eb967f2.ctex"]
+source_file="res://assets/pizza_place.webp"
+dest_files=["res://.godot/imported/pizza_place.webp-46a5a5de094cf14944d8d01240e217c1.ctex"]
 
 [params]
 

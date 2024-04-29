@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://crwfjlyhvhm3a"]
+[gd_scene load_steps=27 format=3 uid="uid://crwfjlyhvhm3a"]
 
 [ext_resource type="Script" path="res://library.gd" id="1_vocyu"]
 [ext_resource type="Texture2D" uid="uid://cexcndtsny1up" path="res://assets/vecteezy_city-street-with-houses-and-overpass-road_15680390.jpg" id="2_kqkwh"]
@@ -9,10 +9,19 @@
 [ext_resource type="Texture2D" uid="uid://bdaqgbgwmb52n" path="res://Character/2.png" id="4_te115"]
 [ext_resource type="Texture2D" uid="uid://leldjr1gi6kd" path="res://Character/3.png" id="5_vexpq"]
 [ext_resource type="Texture2D" uid="uid://4hhrq2nhkwvp" path="res://Character/4.png" id="6_26r7e"]
+[ext_resource type="Texture2D" uid="uid://mcr3cklx45m0" path="res://Character/human/1.png" id="6_fcspe"]
+[ext_resource type="Texture2D" uid="uid://b3158hf8ety8d" path="res://Character/human/9.png" id="6_tgevg"]
+[ext_resource type="Texture2D" uid="uid://dysf6bl3sxm57" path="res://Character/human/2.png" id="7_075bq"]
 [ext_resource type="Texture2D" uid="uid://bkumktjhdmjf7" path="res://Character/5.png" id="7_pj43d"]
 [ext_resource type="Texture2D" uid="uid://ctyy0w0ueplve" path="res://Character/6.png" id="8_1oa66"]
+[ext_resource type="Texture2D" uid="uid://dsp8g8nlbmltw" path="res://Character/human/3.png" id="8_hobes"]
+[ext_resource type="Texture2D" uid="uid://dntxohj082chd" path="res://Character/human/4.png" id="9_5jbc5"]
 [ext_resource type="Texture2D" uid="uid://b8qx463gmakkv" path="res://Character/7.png" id="9_407fe"]
+[ext_resource type="Texture2D" uid="uid://d4e4p80q0nnbc" path="res://Character/human/5.png" id="10_hnrpy"]
 [ext_resource type="Texture2D" uid="uid://dyyc1t1htya5v" path="res://Character/8.png" id="10_imroh"]
+[ext_resource type="Texture2D" uid="uid://51yp276obycg" path="res://Character/human/6.png" id="11_5tea7"]
+[ext_resource type="Texture2D" uid="uid://da2bga2mib43x" path="res://Character/human/7.png" id="12_jn84h"]
+[ext_resource type="Texture2D" uid="uid://c78kgedhlkyep" path="res://Character/human/8.png" id="13_n2u8d"]
 [ext_resource type="AudioStream" uid="uid://d1g0q63vxtnmc" path="res://assets/Otjanbird-Pt.-I.mp3" id="14_in5nl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqkqx"]
@@ -26,6 +35,43 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_tgevg")
+}],
+"loop": true,
+"name": &"new_style_default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_fcspe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_075bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hobes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5jbc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hnrpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5tea7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jn84h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_n2u8d")
+}],
+"loop": true,
+"name": &"new_style_walking",
 "speed": 5.0
 }, {
 "frames": [{
@@ -74,6 +120,16 @@ position = Vector2(267.292, 115.655)
 scale = Vector2(3, 3)
 texture = ExtResource("2_kqkwh")
 
+[node name="alamatTaajob2" type="Label" parent="StaticBody2D2/Bg"]
+offset_left = 122.509
+offset_top = -316.125
+offset_right = 378.509
+offset_bottom = -195.125
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 83
+text = "! ! !"
+horizontal_alignment = 1
+
 [node name="alamatTaajob" type="Label" parent="StaticBody2D2/Bg"]
 offset_left = 364.1
 offset_top = -165.344
@@ -113,7 +169,7 @@ offset_bottom = -44.0
 position = Vector2(647, 261.563)
 scale = Vector2(0.664234, 0.664234)
 sprite_frames = SubResource("SpriteFrames_m6bo8")
-animation = &"walking"
+animation = &"new_style_default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(644, 257)

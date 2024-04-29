@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://cia6jauvwrnpc"]
+
+[ext_resource type="Script" path="res://cloths_shop.gd" id="1_drl4c"]
+[ext_resource type="Texture2D" uid="uid://ob4w0u2x1li5" path="res://assets/shopping-clothes-store-vector.jpg" id="2_xtx8y"]
+[ext_resource type="FontFile" uid="uid://bt7me82f7hdaq" path="res://font/IRANYekan-Black.ttf" id="3_07xsa"]
+
+[node name="cloths_shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_drl4c")
+
+[node name="BackGround" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -626.5
+offset_top = -312.0
+offset_right = 626.5
+offset_bottom = 312.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xtx8y")
+
+[node name="new_style" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = 62.0
+offset_right = 440.0
+offset_bottom = 170.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_07xsa")
+theme_override_font_sizes/font_size = 37
+text = "سلام
+یه استایل جدید میخوام"
+
+[node name="no_new_style" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -443.0
+offset_top = 67.0
+offset_right = -14.0
+offset_bottom = 167.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_07xsa")
+theme_override_font_sizes/font_size = 41
+text = "میخوام خارج شم"
+
+[connection signal="pressed" from="new_style" to="." method="_on_new_style_pressed"]
+[connection signal="pressed" from="no_new_style" to="." method="_on_no_new_style_pressed"]
